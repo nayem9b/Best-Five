@@ -2,3 +2,23 @@
     height: 400px;
     padding-top: 150px;
 }
+
+#photo{
+    max-width: 140%;
+    height: 50%;
+    object-fit: contain;
+}
+
+
+
+
+
+   
+/* // console.log('Js file connected')
+// document.getElementById('disabled-button').addEventListener('click',function(){
+//   const newButton= document.getElementById('disabled-button').innerHTML;
+//   console.log(newButton);
+// }) */
+
+
+/* //   const costOffTotalPlayers = perPlayerCostValue  */
