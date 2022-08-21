@@ -1,7 +1,7 @@
 document.getElementById('calculate-button').addEventListener('click', function(){
   const perPlayerCostString= document.getElementById('perPlayerCost').value;
   const perPlayerCostValue= parseInt(perPlayerCostString);
-  
+
   if (isNaN(perPlayerCostValue)) {
     alert('Please provide a valid number for per Player');
     return;
@@ -69,7 +69,7 @@ function displayPlayer()
         alert("Can not select more than five players")
         return;
     }
-
+//   6 joner beshi add hoye jacche. pore thik korar lagbe
     playerListContainer.appendChild(tr);
 }
 
@@ -80,9 +80,7 @@ function addToTable(element) {
         playerName: playerName
         
     }
-    
-
-    playerList.push(player);
+     playerList.push(player);
     
     displayPlayer();
 }
