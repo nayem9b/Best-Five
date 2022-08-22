@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1 class="text-5xl text-center pt-12 bg-black text-orange-500 font-semibold font-mono" id="best-five"> Select your best Five Players</h1>
+    <h1 class="text-5xl text-center pt-12 bg-black text-orange-500 font-semibold font-mono" id="best-five"> Select Your Best Five Players</h1>
    
      <!-- Card Section Starts here -->
 
@@ -28,7 +28,7 @@
               <h2 class="card-title">Sergio Ramos</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this); this.disabled=true">Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" onclick="btnDisable()" id="btn">Select</button>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@
               <h2 class="card-title">Lionel Messi</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)">Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn1">Select</button>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
               <h2 class="card-title">Neymar Jr</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn">Select</button>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@
               <h2 class="card-title">Kylian Mbappé</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@
               <h2 class="card-title">Erling Haaland</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@
               <h2 class="card-title">Marcelo Vieira</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@
               <h2 class="card-title">Mohamed Salah</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this);this.disabled=true" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@
               <h2 class="card-title">Robert Lewandowski</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -132,46 +132,7 @@
               <h2 class="card-title">Renato Sanches</h2>
               <p>If a dog chews shoes whose shoes does he choose?</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- Card 10 -->
-        <div class="card w-80 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- Card 11 -->
-        <div class="card w-80 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)">Select</button>
-              </div>
-            </div>
-          </div>
-          <!-- Card 12 -->
-        <div class="card w-80 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img src="https://placeimg.com/400/225/arch" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
               </div>
             </div>
           </div>
@@ -180,7 +141,7 @@
 
         <div class="selected-players">
           <h1 class="text-3xl text-center text-orange-500 mt-5 font-semibold font-sans">Selected V</h1>
-          <p class="text-4xl text-center">Number of Selected Players: <span id="total-selected-players" class="text-blue-500"> 0</span>
+          <p class="mt-4 text-4xl text-center">Number of Selected Players: <span id="total-selected-players" class="text-blue-500"> 0</span>
           </p>
           <div class="overflow-x-auto">
            <table class="table w-full">
@@ -197,31 +158,31 @@
          <div class="budget Calculation">
           <div class=" flex mt-8 ml-12"> 
               <h2 class="text-lg">Per Player:</h2>
-              <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs ml-5 p-2" id="perPlayerCost"/>
+              <input type="text" placeholder="Type here" class="input input-bordered input-accent max-w-xs ml-5 p-2" id="perPlayerCost"/>
               
              </div> 
              
              <div class="card-actions">
-              <button class="btn btn-primary" id="calculate-button">Calculate</button>
+              <button class="btn btn-primary justify-end mt" id="calculate-button">Calculate</button>
             </div>
       
-            <h1>Player Expenses: <span id="expenses-span-value">0</span></h1>
+            <h1 class="mt-5 text-lg text-center">Player Expenses: $<span id="expenses-span-value">0</span></h1>
       
       
       
       
           <div class="flex mt-8 ml-12"> 
               <h2 class="text-lg">Manager:</h2>
-              <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs ml-5 p-2" id="manager-cost"/>
+              <input type="text" placeholder="Type here" class="input input-bordered input-accent max-w-xs ml-5 p-2" id="manager-cost"/>
              </div> 
           <div class="flex mt-8 ml-12"> 
               <h2 class="text-lg">Coach:</h2>
-              <input type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs ml-5 p-2" id="coach-cost"/>
+              <input type="text" placeholder="Type here" class="input input-bordered input-accent max-w-xs ml-5 p-2" id="coach-cost"/>
              </div>
              <div class="card-actions">
               <button class="btn btn-primary" id="calculate-total">Calculate Total</button>
             </div> 
-            <h1>Total: <span id="total"> 0</span></h1>
+            <h1 class="mt-5 text-lg text-center">Total :</span><span class="text-orange-500" id="total"> 0</span></h1>
          </div>
       
       
@@ -241,7 +202,6 @@
       <a class="link link-hover">About us</a> 
       <a class="link link-hover">Contact</a> 
       <a class="link link-hover">Jobs</a> 
-      <a class="link link-hover">Press kit</a>
     </div> 
     <div>
       <div class="grid grid-flow-col gap-4">

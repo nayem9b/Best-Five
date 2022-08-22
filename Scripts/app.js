@@ -1,22 +1,43 @@
+
+var elems = document.getElementsByClassName("angka");
+for(var i = 0; i < elems.length; i++) {
+    elems[i].disabled = true;
+}
+
+//   button disable er kaj ta thik korar lagbe
+
+//    document.getElementsByClassName('btn').addEventListener('click',function(){
+//     document.getElementsByClassName("btn").disabled = true;
+//    })
+
+                //  Player Cost........
 document.getElementById('calculate-button').addEventListener('click', function(){
-  const perPlayerCostString= document.getElementById('perPlayerCost').value;
-  const perPlayerCostValue= parseInt(perPlayerCostString);
+    const perPlayerCostString= document.getElementById('perPlayerCost').value;
+    const perPlayerCostValue= parseInt(perPlayerCostString);
+    const playerTotalCost= perPlayerCostValue*playerList.length;
+  
+  
+    if (isNaN(perPlayerCostValue)) {
+      alert('Please provide a valid number for per Player');
+      return;
+     }
+     else if(perPlayerCostValue<0){
+      alert('Per Player Cost can not be a negative value');
+      return;
+     }
+   
+  
+    const player= document.getElementById('expenses-span-value').innerText= playerTotalCost;
+  })
 
-  if (isNaN(perPlayerCostValue)) {
-    alert('Please provide a valid number for per Player');
-    return;
-   }
-   else if(perPlayerCostValue<0){
-    alert('Per Player Cost can not be a negative value');
-    return;
-   }
 
-  const player= document.getElementById('expenses-span-value').innerText= perPlayerCostValue;
-})
-
-document.getElementById('calculate-total').addEventListener('click',function(){
+                // Manager and Coach cost .......
+  document.getElementById('calculate-total').addEventListener('click',function(){
     const managerCostString= document.getElementById('manager-cost').value;
     const managerCostValue= parseInt(managerCostString);
+    const perPlayerCostString= document.getElementById('perPlayerCost').value;
+    const perPlayerCostValue= parseInt(perPlayerCostString);
+    const playerTotalCost= perPlayerCostValue*playerList.length;
     if (isNaN(managerCostValue)) {
         alert('Please provide a valid number for Manager Cost');
         return;
@@ -40,7 +61,7 @@ document.getElementById('calculate-total').addEventListener('click',function(){
        }
     console.log(coachCostValue);
 
-    const total = document.getElementById('total').innerText= (managerCostValue+ coachCostValue);
+    const total = document.getElementById('total').innerText= (managerCostValue+ coachCostValue + playerTotalCost);
 })
 
 const playerList = [];
@@ -64,13 +85,15 @@ function displayPlayer()
         `;
         playerListContainer.appendChild(tr);
     }
-
-    if(playerList.length>5){
+       if(playerList.length>5){
         alert("Can not select more than five players")
         return;
     }
 //   6 joner beshi add hoye jacche. pore thik korar lagbe
-    playerListContainer.appendChild(tr);
+    // playerListContainer.appendChild(tr);
+
+
+  
 }
 
 function addToTable(element) {

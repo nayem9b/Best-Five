@@ -9,9 +9,19 @@
     object-fit: contain;
 } */
 
+#calculate-button{
+    margin-left: 150px;
+    margin-top: 20px;
+}
 
+#calculate-total{
+    margin-left: 120px;
+    margin-top: 20px;
+}
 
-
+#total{
+    margin-left: 100px;
+}
 
    
 /* // console.log('Js file connected')
