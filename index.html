@@ -16,8 +16,8 @@
    
      <!-- Card Section Starts here -->
 
-     <div class="flex">
-      <div class="grid grid-cols-3 gap-4 w-9/12">
+     <div class="flex ">
+      <div class="grid xl:grid-cols-3  2xl:grid-cols-3  sm:grid-cols-2 gap-3 w-3/5">
         
         <!-- Card 1 -->
         <div class="card w-80 bg-base-100 shadow-xl">
@@ -144,7 +144,7 @@
 
 
                  
-        <section class="w-3/12">
+        <section class=" ml-12 w-2/5">
 
                            <!-- selected player section starts here -->
         <div class="selected-players">
@@ -177,7 +177,7 @@
               <button class="btn btn-primary justify-end mt" id="calculate-button">Calculate</button>
             </div>
       
-            <h1 class="mt-5 text-lg text-center">Player Expenses: $<span id="expenses-span-value">0</span></h1>
+            <h1 class="mt-5 text-2xl ml-12">Player Expenses: <span class="text-orange-500 text-2xl font-medium" id="expenses-span-value">0</span></h1>
                     <!-- Player budget calculation ends here -->
       
 
@@ -190,12 +190,12 @@
              </div> 
           <div class="flex mt-8 ml-12"> 
               <h2 class="text-lg">Coach:</h2>
-              <input type="text" placeholder="Type here" class="input input-bordered input-accent max-w-xs ml-5 p-2" id="coach-cost"/>
+              <input type="text" placeholder="Type here" class="input input-bordered input-accent max-w-xs ml-10 p-2" id="coach-cost"/>
              </div>
              <div class="card-actions">
               <button class="btn btn-primary" id="calculate-total">Calculate Total</button>
             </div> 
-            <h1 class="mt-5 text-2xl text-center">Total :<span class="text-orange-500 text-2xl font-semibold" id="total"> 0</span></h1>
+            <h1 class="mt-5 text-2xl ml-12">Total :<span class="text-orange-500 text-2xl font-semibold" id="total"> 0</span></h1>
          </div>
                 <!-- manager and coach cost starts here -->
       
@@ -204,6 +204,7 @@
      </div>
  
 
+     
    </div>
 
 

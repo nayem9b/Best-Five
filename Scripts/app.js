@@ -1,56 +1,9 @@
-         //  Player Cost........
-document.getElementById('calculate-button').addEventListener('click', function(){
-    const perPlayerCostString= document.getElementById('perPlayerCost').value;
-    const perPlayerCostValue= parseInt(perPlayerCostString);
-    const playerTotalCost= perPlayerCostValue*playerList.length;
   
-  
-    if (isNaN(perPlayerCostValue)) {
-      alert('Please provide a valid number for per Player');
-      return;
-     }
-     else if(perPlayerCostValue<0){
-      alert('Per Player Cost can not be a negative value');
-      return;
-     }
-   
-  
-    const player= document.getElementById('expenses-span-value').innerText= playerTotalCost;
-  })
 
 
-                // Manager and Coach cost .......
-  document.getElementById('calculate-total').addEventListener('click',function(){
-    const managerCostString= document.getElementById('manager-cost').value;
-    const managerCostValue= parseInt(managerCostString);
-    const perPlayerCostString= document.getElementById('perPlayerCost').value;
-    const perPlayerCostValue= parseInt(perPlayerCostString);
-    const playerTotalCost= perPlayerCostValue*playerList.length;
-    if (isNaN(managerCostValue)) {
-        alert('Please provide a valid number for Manager Cost');
-        return;
-       }
-       else if(managerCostValue<0){
-        alert('Manager Cost can not be a negative value');
-        return;
-       }
     
-    const coachCostString= document.getElementById('coach-cost').value;
-    const coachCostValue= parseInt(coachCostString);
-    if (isNaN(coachCostValue)) {
-        alert('Please provide a valid number for Coach Cost');
-        return;
-       }
-       else if(coachCostValue<0){
-        alert('Coach Cost can not be a negative value');
-        return;
-       }
 
-    const total = document.getElementById('total').innerText= (managerCostValue+ coachCostValue + playerTotalCost);
-})
-
-
-                       // player data table.....
+                             // player data table.....
 
     const playerList = [];
 
@@ -64,33 +17,91 @@ document.getElementById('calculate-button').addEventListener('click', function()
 
     for(let i = 0; i < playerList.length; i++)
     {
-        if(playerList.length>5){
-            alert("Can not select more than five players")
-            
-        } 
-        else{
             const tr = document.createElement("tr");
             tr.innerHTML = `
             <th>${i+1}</th>
             <td>${playerList[i].playerName}</td>
             `;
             playerListContainer.appendChild(tr);
-        }
        
     }
-}
 
-function addToTable(element) {
-    const playerName = element.parentNode.parentNode.children[0].innerText;
+                                     //  Player Cost........
+       document.getElementById('calculate-button').addEventListener('click', function(){
+        const perPlayerCostString= document.getElementById('perPlayerCost').value;
+        const perPlayerCostValue= parseInt(perPlayerCostString);
+        const playerTotalCost= perPlayerCostValue*playerList.length;
+      
+      
+        if (isNaN(perPlayerCostValue)) {
+          alert('Please provide a valid number for per Player');
+          return;
+         }
+         else if(perPlayerCostValue<0){
+          alert('Per Player Cost can not be a negative value');
+          return;
+         }
+       
+      
+        const player= document.getElementById('expenses-span-value').innerText= playerTotalCost;
+      })
 
-    const player = {
-        playerName: playerName
-        
+
+                    // Manager and Coach cost .......
+                    document.getElementById('calculate-total').addEventListener('click',function(){
+                        const managerCostString= document.getElementById('manager-cost').value;
+                        const managerCostValue= parseInt(managerCostString);
+                        const perPlayerCostString= document.getElementById('perPlayerCost').value;
+                        const perPlayerCostValue= parseInt(perPlayerCostString);
+                        const playerTotalCost= perPlayerCostValue*playerList.length;
+                        if (isNaN(managerCostValue)) {
+                            alert('Please provide a valid number for Manager Cost');
+                            return;
+                           }
+                           else if(managerCostValue<0){
+                            alert('Manager Cost can not be a negative value');
+                            return;
+                           }
+                        
+                        const coachCostString= document.getElementById('coach-cost').value;
+                        const coachCostValue= parseInt(coachCostString);
+                        if (isNaN(coachCostValue)) {
+                            alert('Please provide a valid number for Coach Cost');
+                            return;
+                           }
+                           else if(coachCostValue<0){
+                            alert('Coach Cost can not be a negative value');
+                            return;
+                           }
+                    
+                        const total = document.getElementById('total').innerText= (managerCostValue+ coachCostValue + playerTotalCost);
+                    })
+                    
+
+
+}                                         // player name push.......... 
+
+     function addToTable(element) {
+
+         if(playerList.length<5){
+
+        const playerName = element.parentNode.parentNode.children[0].innerText;
+
+        const player = {
+            playerName: playerName
+            }
+         playerList.push(player);
+         displayPlayer();
+
     }
-     playerList.push(player);
-    
-    displayPlayer();
+    else {
+        alert("You Can't Select More Than 5 Players");
+    }
+   
 }
+
+
+
 
 document.getElementById('btn1').addEventListener('click',function(){
     document.getElementById(btn1.id).disabled = true;
