@@ -26,9 +26,9 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Sergio Ramos</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" onclick="btnDisable()" id="btn">Select</button>
+              <p>36 Goals   .   120 Assist</p>
+              <div class="">
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn1">Select</button>
               </div>
             </div>
           </div>
@@ -39,9 +39,9 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Lionel Messi</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn1">Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn2">Select</button>
               </div>
             </div>
           </div>
@@ -52,9 +52,9 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Neymar Jr</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn">Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn3">Select</button>
               </div>
             </div>
           </div>
@@ -65,9 +65,9 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Kylian Mbappé</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn4" >Select</button>
               </div>
             </div>
           </div>
@@ -78,9 +78,9 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Erling Haaland</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn5" >Select</button>
               </div>
             </div>
           </div>
@@ -91,9 +91,9 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Marcelo Vieira</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn6" >Select</button>
               </div>
             </div>
           </div>
@@ -104,9 +104,9 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Mohamed Salah</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn7" >Select</button>
               </div>
             </div>
           </div>
@@ -117,45 +117,56 @@
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Robert Lewandowski</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn8" >Select</button>
               </div>
             </div>
           </div>
           <!-- Card 9 -->
         <div class="card w-80 bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
-              <img src="Player images/0408-2223-L1-PSG-Renato-Sanches-2.jpg" alt="Shoes" class="rounded-xl" id="photo"  />
+              <img src="Player images/Renato.jpg" alt="Shoes" class="rounded-xl" id="photo"  />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title">Renato Sanches</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>36 Goals   .   120 Assist</p>
               <div class="card-actions">
-                <button class="btn btn-primary" onclick="addToTable(this)" id="btn" >Select</button>
+                <button class="btn btn-primary" onclick="addToTable(this);disableButton(this)" id="btn9" >Select</button>
               </div>
             </div>
           </div>
       </div>
-      <section class="w-3/12">
 
+                         <!-- Card Section Ends here -->
+
+
+
+
+                 
+        <section class="w-3/12">
+
+                           <!-- selected player section starts here -->
         <div class="selected-players">
           <h1 class="text-3xl text-center text-orange-500 mt-5 font-semibold font-sans">Selected V</h1>
           <p class="mt-4 text-4xl text-center">Number of Selected Players: <span id="total-selected-players" class="text-blue-500"> 0</span>
           </p>
           <div class="overflow-x-auto">
            <table class="table w-full">
-             <!-- head -->
              <tbody id="selected-player">
-               <!-- row 1 -->
-              
+
              </tbody>
            </table>
          </div>
-      
-         </div>
-      
+        </div>  
+                        <!-- selected player section ends here -->
+
+
+
+
+                        <!-- Player budget calculation starts here -->
          <div class="budget Calculation">
+          <h1 class="text-3xl text-center text-orange-500 mt-5 font-semibold">Budget</h1>
           <div class=" flex mt-8 ml-12"> 
               <h2 class="text-lg">Per Player:</h2>
               <input type="text" placeholder="Type here" class="input input-bordered input-accent max-w-xs ml-5 p-2" id="perPlayerCost"/>
@@ -167,10 +178,12 @@
             </div>
       
             <h1 class="mt-5 text-lg text-center">Player Expenses: $<span id="expenses-span-value">0</span></h1>
+                    <!-- Player budget calculation ends here -->
       
+
+
       
-      
-      
+                    <!-- manager and coach cost starts here -->
           <div class="flex mt-8 ml-12"> 
               <h2 class="text-lg">Manager:</h2>
               <input type="text" placeholder="Type here" class="input input-bordered input-accent max-w-xs ml-5 p-2" id="manager-cost"/>
@@ -182,9 +195,9 @@
              <div class="card-actions">
               <button class="btn btn-primary" id="calculate-total">Calculate Total</button>
             </div> 
-            <h1 class="mt-5 text-lg text-center">Total :</span><span class="text-orange-500" id="total"> 0</span></h1>
+            <h1 class="mt-5 text-lg text-center">Total :</span><span class="text-orange-500 font-semibold" id="total"> 0</span></h1>
          </div>
-      
+                <!-- manager and coach cost starts here -->
       
       </section>
 
@@ -211,10 +224,9 @@
       </div>
     </div> 
     <div>
-      <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+      <p>Copyright © 2022 - All right reserved by Private Industries Ltd</p>
     </div>
   </footer>
-
 
    <script src="Scripts/app.js"></script>
 </body>

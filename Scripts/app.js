@@ -1,16 +1,4 @@
-
-var elems = document.getElementsByClassName("angka");
-for(var i = 0; i < elems.length; i++) {
-    elems[i].disabled = true;
-}
-
-//   button disable er kaj ta thik korar lagbe
-
-//    document.getElementsByClassName('btn').addEventListener('click',function(){
-//     document.getElementsByClassName("btn").disabled = true;
-//    })
-
-                //  Player Cost........
+         //  Player Cost........
 document.getElementById('calculate-button').addEventListener('click', function(){
     const perPlayerCostString= document.getElementById('perPlayerCost').value;
     const perPlayerCostValue= parseInt(perPlayerCostString);
@@ -47,8 +35,6 @@ document.getElementById('calculate-button').addEventListener('click', function()
         return;
        }
     
-    console.log(managerCostValue);
-    
     const coachCostString= document.getElementById('coach-cost').value;
     const coachCostValue= parseInt(coachCostString);
     if (isNaN(coachCostValue)) {
@@ -59,41 +45,39 @@ document.getElementById('calculate-button').addEventListener('click', function()
         alert('Coach Cost can not be a negative value');
         return;
        }
-    console.log(coachCostValue);
 
     const total = document.getElementById('total').innerText= (managerCostValue+ coachCostValue + playerTotalCost);
 })
 
-const playerList = [];
 
-function displayPlayer()
-{
+                       // player data table.....
+
+    const playerList = [];
+
+    function displayPlayer()
+    {
     const totalSelectedPlayers = document.getElementById("total-selected-players");
     totalSelectedPlayers.innerText = playerList.length;
    
-    
-    const playerListContainer = document.getElementById("selected-player");
+     const playerListContainer = document.getElementById("selected-player");
     playerListContainer.textContent = '';
 
     for(let i = 0; i < playerList.length; i++)
     {
-
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-        <th>${i+1}</th>
-        <td>${playerList[i].playerName}</td>
-        `;
-        playerListContainer.appendChild(tr);
+        if(playerList.length>5){
+            alert("Can not select more than five players")
+            return playerList();
+        } 
+        else{
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+            <th>${i+1}</th>
+            <td>${playerList[i].playerName}</td>
+            `;
+            playerListContainer.appendChild(tr);
+        }
+       
     }
-       if(playerList.length>5){
-        alert("Can not select more than five players")
-        return;
-    }
-//   6 joner beshi add hoye jacche. pore thik korar lagbe
-    // playerListContainer.appendChild(tr);
-
-
-  
 }
 
 function addToTable(element) {
@@ -107,3 +91,51 @@ function addToTable(element) {
     
     displayPlayer();
 }
+
+// function disableButton(button) {
+//     document.getElementById(btn1.id).disabled = true;
+// }  
+// function disableButton(button) {
+//     document.getElementById(btn2.id).disabled = true;
+// }  
+// function disableButton(button) {
+//     document.getElementById(btn3.id).disabled = true;
+// }  
+// function disableButton(button) {
+//     document.getElementById(btn5.id).disabled = true;
+// }  
+//   document.getElementById('btn4').disabled=true;
+
+//   const buttons = document.getElementsById("btn2");
+//     for (let i = 0; i < buttons.length; i++) {
+//       buttons[i].disabled = true;
+//     }
+
+document.getElementById('btn1').addEventListener('click',function(){
+    document.getElementById(btn1.id).disabled = true;
+})
+document.getElementById('btn2').addEventListener('click',function(){
+    document.getElementById(btn2.id).disabled = true;
+})
+document.getElementById('btn3').addEventListener('click',function(){
+    document.getElementById(btn3.id).disabled = true;
+})
+document.getElementById('btn4').addEventListener('click',function(){
+    document.getElementById(btn4.id).disabled = true;
+})
+document.getElementById('btn5').addEventListener('click',function(){
+    document.getElementById(btn5.id).disabled = true;
+})
+document.getElementById('btn6').addEventListener('click',function(){
+    document.getElementById(btn6.id).disabled = true;
+})
+document.getElementById('btn7').addEventListener('click',function(){
+    document.getElementById(btn7.id).disabled = true;
+})
+document.getElementById('btn8').addEventListener('click',function(){
+    document.getElementById(btn8.id).disabled = true;
+})
+document.getElementById('btn9').addEventListener('click',function(){
+    document.getElementById(btn9.id).disabled = true;
+})
+

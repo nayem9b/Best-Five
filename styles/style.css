@@ -3,14 +3,8 @@
     padding-top: 150px;
 }
 
-/* #photo{
-    max-width: 140%;
-    height: 50%;
-    object-fit: contain;
-} */
-
 #calculate-button{
-    margin-left: 150px;
+    margin-left: 140px;
     margin-top: 20px;
 }
 
@@ -22,13 +16,3 @@
 #total{
     margin-left: 100px;
 }
-
-   
-/* // console.log('Js file connected')
-// document.getElementById('disabled-button').addEventListener('click',function(){
-//   const newButton= document.getElementById('disabled-button').innerHTML;
-//   console.log(newButton);
-// }) */
-
-
-/* //   const costOffTotalPlayers = perPlayerCostValue  */
