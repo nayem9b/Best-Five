@@ -66,7 +66,7 @@ document.getElementById('calculate-button').addEventListener('click', function()
     {
         if(playerList.length>5){
             alert("Can not select more than five players")
-            return playerList();
+            
         } 
         else{
             const tr = document.createElement("tr");
@@ -91,25 +91,6 @@ function addToTable(element) {
     
     displayPlayer();
 }
-
-// function disableButton(button) {
-//     document.getElementById(btn1.id).disabled = true;
-// }  
-// function disableButton(button) {
-//     document.getElementById(btn2.id).disabled = true;
-// }  
-// function disableButton(button) {
-//     document.getElementById(btn3.id).disabled = true;
-// }  
-// function disableButton(button) {
-//     document.getElementById(btn5.id).disabled = true;
-// }  
-//   document.getElementById('btn4').disabled=true;
-
-//   const buttons = document.getElementsById("btn2");
-//     for (let i = 0; i < buttons.length; i++) {
-//       buttons[i].disabled = true;
-//     }
 
 document.getElementById('btn1').addEventListener('click',function(){
     document.getElementById(btn1.id).disabled = true;
